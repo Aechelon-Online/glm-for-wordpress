@@ -11,37 +11,37 @@ const progressBar = videoConsole.querySelectorAll('.video-progress-filled')
 
 
 
-const videos = ['greg-luce-music-promo.mov','rocket-man-demo-clip.mov', 'hob-wedding-fancy-like-moves.mov','private-party-doobie-brothers-clip.mov','wedding-groove-cupid-shuffle.mov']
+const videos = {
+    'https://www.youtube.com/embed/a4hIagju_sk': 'Greg Luce Music - Promo Video',
+    'https://www.youtube.com/embed/b7fEKZ8TE1E': 'Private Party - Listen To The Music',
+    'https://www.youtube.com/embed/n60Pm7AsEB0': 'Rocket Man - Prestonwood CC'
+    }
 
 let videoPlayer = ""
-for (const vid of videos) {
+for (let [url, title] of Object.entries(videos)) {
 
 videoPlayer += `
     <div class="video-player">
-        <video src="../img/${vid}" class="video" controls></video>
+        <iframe width="560" height="315" src="${url}" frameborder="0" allowfullscreen class="video"></iframe>
+        <h4 class="video-text">${title}</h4>
     </div>
     `
-    
-
-
 }
 
 
 document.querySelector('.video-wrapper').innerHTML = videoPlayer
 
-console.log(document.querySelectorAll('.play-button'))
-console.log(playButton)
 
-document.querySelectorAll('.play-button').addEventListener('click', function(e){
-    if (video.paused) {
-        video.play()
-        e.target.textContent = '❚❚'
-    } else {
-        video.pause()
-        e.target.textContent = '▶'
-    }
+// document.querySelectorAll('.play-button').addEventListener('click', function(e){
+//     if (video.paused) {
+//         video.play()
+//         e.target.textContent = '❚❚'
+//     } else {
+//         video.pause()
+//         e.target.textContent = '▶'
+//     }
     
-})
+// })
 
 {/* <div class="player-controls">
             <div class="video-progress">

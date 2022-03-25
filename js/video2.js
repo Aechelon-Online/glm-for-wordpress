@@ -9,14 +9,14 @@ const progressBar = videoConsole.querySelectorAll('.video-progress-filled')
 
 
 
-const videos = ['greg-luce-music-promo.mov','rocket-man-demo-clip.ov', 'hob-wedding-fancy-like-moves.mov','private-party-doobie-brothers-clip.mov','wedding-groove-cupid-shuffle.mov']
+const videos = ['https://www.youtube.com/embed/a4hIagju_sk','https://www.youtube.com/embed/ILpzIq0GzH4', 'https://www.youtube.com/embed/b7fEKZ8TE1E','https://www.youtube.com/embed/n60Pm7AsEB0']
 
 let videoPlayer = ""
 for (const vid of videos) {
 
 videoPlayer += `
     <div class="video-player">
-        <video src="../img/${vid}" class="video"></video>
+        <iframe width="560" height="315" src="${vid}" frameborder="0" allowfullscreen class="video"></iframe>
             
         <div class="player-controls">
             <div class="video-progress">
@@ -36,6 +36,8 @@ videoPlayer += `
 }
 
 document.querySelector('.video-wrapper').innerHTML = videoPlayer
+
+console.log(volume)
 
 if ( playButton.length !== 0 ) {
     // Play and Pause Button
