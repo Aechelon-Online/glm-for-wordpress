@@ -1,6 +1,7 @@
 html, body, * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -16,11 +17,16 @@ html, body, * {
     top: auto;
     bottom: 0;
 } */
+
 /* Animation Keyframes */
-@keyframes fadeToBlack {
+
+@keyframes fadeToBlackAndUp {
     0% {background-color: white;}
-    20% {background-color: black;}
-    100% {background-color: black;}
+    10% {background-color: black;}
+    50% {background-color: black;}
+    80% {opacity: 1;background-color: black;}
+    90% {opacity: 1; height: 100vh;background-color: black;}
+    100% {opacity: 1; height: 0vh;background-color: black;}
 }
 
 @keyframes logoMove {
@@ -28,11 +34,7 @@ html, body, * {
     100% {opacity: 1; transform: scale(1);}
 }
 
-@keyframes arrowBounce {
-    0% {transform: translateY(0vw) scale(4,1) rotate(180deg);}
-    50% {transform: translateY(1vw) scale(4,1) rotate(180deg);}
-    100% {transform: translateY(0vw) scale(4,1) rotate(180deg);}
-}
+
 
 @keyframes scaleForwardFade {
     0% {transform: scale(0.1); opacity: 0;}
@@ -102,40 +104,15 @@ html, body, * {
 }
 
 
-
-.parallax-wrapper {
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 300px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    z-index: 1000;
-}
 .header-wrapper {
     background-color: white;
+    height: 100vh;
     position: relative;
     z-index: 10;
-    animation: fadeToBlack 5s ease-in var(--animation-state);
+    animation: fadeToBlackAndUp 6s ease-in var(--animation-state);
 }
 
-.parallax-wrapper .parallax-group {
-    position: relative;
-    height: 100vh;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-.parallax-wrapper .parallax-group .parallax-layer{
-    position: absolute;
-    inset: 0;
-}
 
-.parallax-wrapper .parallax-group .dj-frame,
-.parallax-wrapper .parallax-group .omb-frame,
-.parallax-wrapper .parallax-group .mc-frame,
-.parallax-wrapper .parallax-group .fx-frame {
-    transform: translateZ(2rem) scale(1);
-}
 .page-body {
     background-color: black;
 }
@@ -201,24 +178,7 @@ html, body, * {
     background-color: transparent;
     width: 24px;
     height: 24px;
-    padding: 0 8px 0 0;
-}
-
-.arrow-wrapper {
-    position: absolute;
-    bottom: calc(20vh - 8vw);
-    width: 100%;
-    height: auto;
-    display: none;
-    justify-content: center;
-}
-.arrow-down {
-    color: white;
-    display: inline-flexbox;
-    justify-self: center;
-    font-size: 5vw;
-    transform: scale(4,1) rotate(180deg);
-    animation: arrowBounce 1s ease-in-out 4s infinite;  
+    margin-right: 8px;
 }
 
 .glm-lines {
@@ -233,7 +193,7 @@ html, body, * {
     display: block;
     font-size: clamp(1rem, 3.5vw, 2rem);
     letter-spacing: 0ch;
-    line-height: 6vw;
+    line-height: 8vh;
     opacity: 0;
 }
 .no-wrap {
@@ -260,7 +220,7 @@ html, body, * {
     background-color: transparent;
     text-align: center;
     position: fixed;
-    top: 8vh;
+    top: 10vh;
     z-index: 999;
     animation: fadeIn 2s ease-in var(--animation-state);
 }
@@ -300,93 +260,132 @@ li {
     color: rgb(72, 115, 253);
 }
 
-.parallax-frames {
-    width: 70%;
-    height: 60vw;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
+/* Parallax Full Page CSS */
 
-.background-image-dj {
-    height: var(--bg-img-ht);
-    background: url('../img/dj-mixer-side.png');
+
+.parallax-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 100px;
+    margin: 0;
+    padding: 0;
+}
+.parallax-wrapper .full-page {
+    position: relative;
+    width: 100vw;
+    height: 175vh;
+    background-blend-mode: multiply;
+    transform-style: preserve-3d;
+}
+.parallax-wrapper .full-page:nth-child(2) {
+    background: rgba(0, 38, 255, 0.322) url('../img/dj-mixer-side.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
- }
- .background-image-omb {
-    height: var(--bg-img-ht);
-    background: url('../img/omb-pic.jpg');
+    transform: translateZ(10px) transformY(6vw) scale(1.1);
+}
+.parallax-wrapper .full-page:nth-child(3) {
+    background: rgba(253, 253, 60, 0.3) url('../img/omb-pic.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
- }
- .background-image-mc {
-    height: var(--bg-img-ht);
-    background: url('../img/solo-mic-wedding.jpeg');
+    transform: translateZ(10px) scale(1.1);
+}
+.parallax-wrapper .full-page:nth-child(4) {
+    background: rgba(170, 0, 255, 0.322) url('../img/solo-mic-wedding.jpeg');
     background-size: cover;
     background-position: 25% 50%;
-    background-repeat: no-repeat;
- }
-.background-image-fx {
-   height: var(--bg-img-ht);
-   background: url('../img/wedding-dance-lights.jpg');
-   background-size: cover;
+    transform: translateZ(10px) scale(1.1);
+}
+.parallax-wrapper .full-page:nth-child(5) {
+    background: rgba(242, 0, 255, 0.322) url('../img/wedding-dance-lights.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(10px) scale(1.1);
 }
 
 
-.dj-frame, .omb-frame, .mc-frame, .fx-frame {
-    height: var(--bg-img-ht);
+.dj-frame {
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 50vh;
+    transform-style: preserve-3d;
 }
-
 
 .dj-text, .omb-text, .mc-text, .fx-text {
-    width: 100%;
-    height: var(--bg-img-ht);
-    color: rgba(255, 255, 255, 0.7);
-    transform: translateZ(3rem) translateY(0vw) scale(1.2);
+    color: rgba(255, 255, 255, 0.8);
     font-family: 'Roboto Mono';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 100;
 }
 
 .dj-text {
-    font-size: 4vw;
+    font-size: clamp(1.15rem, 5vw, 3rem);
+    text-shadow: 2px 2px 1px rgb(0, 44, 109);
+    text-align: center;
+    transform: translateZ(10px) scale(0.9);
 }
+
 .omb-text, .mc-text, .fx-text {
-    font-size: 3.6vw;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    text-shadow: 2px 2px 0 black;
+    text-align: center;
+    transform: translateZ(10px) scale(0.8);
+}
+.text-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    letter-spacing: 0.5px;
+    transform: translateZ(10px) scale(0.8);
+}
+
+.description {
+    font-family: 'Red Hat Display';
+    color: white;
+    text-align: justify;
+    font-size: clamp(20px, 3.5vw, 34px);
+    text-shadow: 1px 1px black;
+    padding: 5vw;
+}
+#glm-dj-text {
+    font-size: clamp(20px, 4.5vw, 48px);
+    padding: 0;
+    margin: -5vw;
+}
+#glm-dj-frame {
+    display: flex;
+}
+
+.bumper {
+    width: 100%;
+    height: 85vh;
 }
 
 .text-image-dj {
-    font-size: 35vw; 
+    font-size: clamp(8rem, 35vw, 20rem); 
     font-family: 'Roboto Mono';
     font-weight: bold;
     background: url('../img/dj-mixing.png');
     background-repeat: no-repeat;
-    background-position: -16vw 12vw;
+    background-position: center;
     background-size: 135%;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(241, 253, 72, 0.25);
+    -webkit-text-fill-color: rgba(241, 253, 72, 0.2);
     opacity: 1;
 }
 
 .text-image-omb {
-    font-size: 35vw; 
+    font-size: clamp(8rem, 35vw, 20rem); 
     font-family: 'Roboto Mono';
     font-weight: bold;
     background: url('../img/omb-pic-beatbox.png');
     background-repeat: no-repeat;
-    background-position-y: -13vw;
-    background-position-x: -9vw;
-    background-size: 120%;
+    background-position: 0% 18%;
+    background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(75, 60, 253, 0.2);
@@ -394,26 +393,26 @@ li {
 }
 
 .text-image-mc {
-    font-size: 35vw; 
+    font-size: clamp(8rem, 35vw, 20rem);
     font-family: 'Roboto Mono';
     font-weight: bold;
     background: url('../img/weddings-mc.jpg');
     background-repeat: no-repeat;
     background-size: 280%;
     background-clip: text;
-    background-position: -38vw -10vw;
+    background-position: 50% 30%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(253, 72, 253, 0.15);
     opacity: 1;
 }
 
 .text-image-fx {
-    font-size: 35vw; 
+    font-size: clamp(8rem, 35vw, 20rem);
     font-family: 'Roboto Mono';
     font-weight: bold;
     background: url('../img/dj-lights.jpg');
     background-repeat: no-repeat;
-    background-position: -16vw 8vw;
+    background-position: bottom 230% left 50%;
     background-size: 180%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -422,10 +421,111 @@ li {
 }
 
 
+.text-image-dj, .text-image-omb, .text-image-mc, .text-image-fx {
+    position: absolute;
+    transform: translateZ(5px) scale(0.95);
+}
+.video-wrapper-front {
+    background-color: black;
+    padding-top: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.video-player {
+    border: 10px solid rgb(255, 230, 230);
+    border-radius: 5px;
+    margin: 10px;
+}
+.video-text {
+    font-family: "Red Hat Display";
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+.video {
+    width: clamp(250px, 80vw, 400px);
+    aspect-ratio: 16 / 9;
+}
+
+/* Calendar API CSS */
+
+.location, .dateTime {
+    font-size: clamp(18px, 5vw, 32px);
+    padding: 3px;
+}
+.calendar-wrapper {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    height: 400px;
+    overflow-x: scroll;
+}
+
+.calendar-api {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+.date-wrapper {
+    background-color:rgb(200, 255, 255);
+    height: clamp(100px, 40vw, 250px);
+    width: max-content;
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: inset 0px 0px 3px 3px blue;
+}
+
+.year, .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(200, 255, 255);
+}
+.year {
+    font-size: clamp(18px, 10vw, 48px);
+}
+.day {
+    font-size: clamp(24px, 15vw, 70px);
+}
+
+.big-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10px;
+    background-color: rgb(200, 255, 255);
+}
+.date-loc {
+    background-color:rgb(200, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+h1 a {
+    background-color: rgb(200, 255, 255);
+}
+
+
+
 .footer-wrapper {
     background-color: #000;
     width: 100vw;
-    height: calc(90vh - 1.2vw);
+    height: 85vh;
     margin: 0;
     display: flex;
     justify-content: flex-end;
@@ -523,6 +623,9 @@ select {
     background: rgba(211, 219, 253, 0.9);
     border-radius: 5px;
 }
+.selections {
+    cursor: pointer;
+}
 
 .box2 {
     margin-bottom: 4px;
@@ -606,13 +709,12 @@ button p {
 .social-logos {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;;
 }
 
 .social {
     margin: clamp(0.25rem, 2vw, 0.5rem);
 }
-
 .short-form {
     height: 70vh;
     display: flex;
@@ -663,7 +765,7 @@ button p {
 .short-form_text {
     height: 10vh;
     font-size: 20px;
-    background-color:rgb(250, 247, 212);
+    background-color:rgb(255, 252, 228);
     text-align: center;
 }
 .short-form_label {
@@ -675,9 +777,11 @@ button p {
     margin-top: 3vh;
 }
 .send-button p {
+    color: rgb(0, 72, 196);
     font-size: 18px;
     font-weight: bold;
 }
+
 /* Pages Design */
 
 .bio-image {
@@ -785,138 +889,6 @@ section h4 {
     font-size: clamp(1rem, 3vw, 1.7rem);
 }
 
-.video-wrapper {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-}
-
-.video-player {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-
-.video-player:hover .player-controls {
-    transform: translateY(0);
-}
-
-.video {
-    width: clamp(250px, 70vw, 600px);
-}
-
-.video-text {
-    font-family: Arial;
-    font-size: clamp(0.8em, 5vw, 2em);
-    padding: 10px 0;
-    color: white;
-}
-
-.video-frame {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.dm-video {
-    width: clamp(300px, 90vw, 800px);
-    height: auto;
-    margin-bottom: 50px;
-}
-
-.player-controls {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    transform: translateY(100%) translateY(-5px);
-    transition: 0.3s;
-    flex-wrap: wrap;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-
-.play-button {
-    width: 10%;
-    height: clamp(25px, 5vw, 50px);
-    border: none;
-    background: black;
-    color: white;
-    margin: 0;
-}
-
-.play-button:focus {
-    outline: none;
-}
-
-.time {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
-    color: white;
-    width: 15%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-input[type='range'] {
-    -webkit-appearance: none;
-    background: transparent;
-    margin: 0;
-    width: 65%;
-    padding: 0 10px;
-}
-
-input[type='range']:focus {
-    outline: none;
-}
-
-input[type='range']::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    background: black;
-}
-
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    transform: translateY(-3px);
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: rgb(255, 145, 0);
-}
-
-.video-progress {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: clamp(5px, 1vw, 10px);
-    transition: 0.3s;
-    background: gray;
-    cursor: pointer;
-}
-
-.video-progress-filled {
-    width: 0;
-    background: rgb(255, 145, 0);
-}
-
-.video-player:hover .video-progress {
-    height: 15px;
-}
 
 .media-header {
     margin-bottom: 3vw;
@@ -925,9 +897,16 @@ input[type='range']::-webkit-slider-thumb {
     .header-page {
         height: 0;
     }
-    
     .phone-number {
         top: 2vh;
+    }
+
+    .phone-number h1{
+        font-size: clamp(16px, 8vw, 32px);
+    }
+    .phone-icon {
+        width: clamp(12px, 6vw, 24px);
+        height: clamp(12px, 6vw, 24px);
     }
     
     .menu-wrapper {
@@ -938,7 +917,7 @@ input[type='range']::-webkit-slider-thumb {
         height: 30px;
         background-color: red;
         z-index: 9999;
-        /* animation: tabRight 0.5s ease-in forwards; */
+        animation: tabRight 0.5s ease-in forwards;
     }
 
     .menu-box {
@@ -1046,16 +1025,18 @@ input[type='range']::-webkit-slider-thumb {
     }
 
 }
+@media only screen and (min-width: 1250px) {
+    .video {
+        width: clamp(350px, 30vw, 450px);
+    }
 
-@media only screen and (min-width: 1200px) {
-    
+    .video-front {
+        width: clamp(250px, 80vw, 600px);
+    }
 
     .video-wrapper {
+        padding-top: 5vw;
         flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .video-player {
-        margin: 1vw 3vw;
     }
 }
+

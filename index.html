@@ -1,6 +1,6 @@
 <!doctype html>
 
-<!-- RE-vamp of Greg Luce Music page for WP -->
+<!-- re-design of hard coded GLM website -->
 
 <html lang="en">
     <head>
@@ -31,177 +31,184 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
         <script src="js/script.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
 
 <body>
-    
-        <header>
-            <div class="menu-wrapper">
-                <div class="flex-tab">
-                        <div>
-                            <div class="spot-mark">X</div>
-                        </div>
-                    <div class="menu-box">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="hidden-box"></div>
+    <header>
+        <div class="menu-wrapper">
+            <div class="flex-tab">
+                <div>
+                    <div class="spot-mark">X</div>
                 </div>
-            </div>
-            <div class="nav-box">
-                <nav class="nav">
-                    <ul class="mobile-menu">
-                        <li><a class="nav-links" href="../bio/index.html">BIO</a></li>
-                        <li><a class="nav-links" href="../media/index.html">MEDIA</a></li>
-                        <li><a class="nav-links" href="../events/index.html">EVENTS</a></li>
-                        <li><a class="nav-links" href="../reviews/index.html">REVIEWS</a></li>
-                        <li><a class="nav-links" href="../blog/index.html">BLOG</a></li>
-                        <li><a class="nav-links" href="../contact/index.html">CONTACT</a></li>
-                    </ul>
-                </nav>
-                <div class="phone-number">
-                    <a href="tel:18174870886"><h1><img src="img/transparent-phone-white.png" class="phone-icon">817.487.0886</h1></a>
+                <div class="menu-box">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
-            </div>
-            
-        </header>
-        
-        <div class="parallax-wrapper">  
-
-            <div class="header-wrapper">
-                <div class="logo-headlines">
-                    <div class="logo-text">
-                        <img class="logo" src="img/glm-logo-red.png" alt="red Greg Luce Music logo">
-                        <p id="glm-text">Greg Luce Music<p>
-                    </div>
-                    <div class="glm-lines">
-                        <p class="glm-description glm-description__left">DJ / One Man Band</p>
-                        <p class="glm-description glm-description__right">Entertaining Dallas, <span class="no-wrap">Fort Worth,</span> and beyond</p>
-                    </div>
-                </div>
-                <div class="arrow-wrapper">
-                    <div class="arrow-down">^</div>
-                </div>
-            </div>
-        
-       
-            <div class="parallax-group background-image-dj group-dj">
-                <div class="parallax-layer color-overlay color-overlay-dj dj-layer"></div>
-                <div class="parallax-layer dj-frame">
-                    <div class="parallax-frames">
-                        <div class="text-image-dj" id="dj">DJ</div>
-                    </div>
-                </div>
-                <div class="dj-text">Seamless Sonic Selections</div>
-            </div>
-            <div class="parallax-group background-image-omb group-omb">
-                <div class="parallax-layer color-overlay color-overlay-omb omb-layer"></div>
-                <div class="parallax-layer omb-frame">
-                    <div class="parallax-frames">
-                        <div class="text-image-omb" id="omb">OMB</div>
-                    </div>
-                </div>
-                <div class="omb-text">Acoustic Looping Entertainment</div>
-            </div>
-            <div class="parallax-group background-image-mc group-mc">
-                <div class="parallax-layer color-overlay color-overlay-mc mc-layer"></div>
-                <div class="parallax-layer mc-frame">
-                    <div class="parallax-frames">
-                        <div class="text-image-mc" id="mc">MC</div>
-                    </div>
-                </div>
-                <div class="mc-text">Personalized Event Presentation</div>
-            </div>
-            <div class="parallax-group background-image-fx group-fx">
-                <div class="parallax-layer color-overlay color-overlay-fx fx-layer"></div>
-                <div class="parallax-layer fx-frame">
-                    <div class="parallax-frames">
-                        <div class="text-image-fx" id="fx">FX</div>
-                    </div>
-                </div>
-                <div class="fx-text">Ambience Enhancing Lighting</div>
-            </div>
-        
-            <div class="footer-wrapper">
-                <form action="https://formsubmit.co/greglucemusic@gmail.com" method="POST">
-                    <h3>Questions? Get them answered here.</h3>
-                    <div class="contact-info">
-                        <div class="top-three">
-                            <label for="name" required>Name</label>
-                            <input type="text" name="Name" required>
-                        </div>
-                        <div class="top-three">
-                            <label for="cell-phone" required>Phone number</label>
-                            <input type="text" name="Cell Phone">
-                        </div>
-                        <div class="top-three">
-                            <label for="email" required>Email</label>
-                            <input type="text" name="Email">
-                        </div>
-                    </div>
-                    <div class="event-date-type">
-                        <div class="mid-two box1">
-                            <label for="date-of-event" required>Date of Event</label>
-                            <input type="date" value="" name="Date Of Event">
-                        </div>
-                        <div class="mid-two box2">
-                            <label for="event-type" required>Event Type</label>
-                            <div id="event-type">
-                                <select>
-                                    <option value="wedding">Wedding</option>
-                                    <option value="private-party">Private Party</option>
-                                    <option value="corporate-event">Corporate Event</option>
-                                    <option value="fundraiser">Fundraiser</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <label for="event-location" required>Event Location</label>
-                    <input type="text" name="Event Location">
-                    <label for="entertainment-selections" required>What would you like to discuss? (check all that apply)</label>
-                    <div class="multi-selections">
-                        <div class="entertainment-checkboxes">
-                            <input type="text" name="Entertainment Selections">
-                            <span class="down-arrow">&blacktriangledown;</span>
-                        </div>
-                        <div class="list">
-                            <label for="omb" class="omb list-items">
-                                <input type="checkbox" name="Solo Acoustic" id="list-omb" class="selections">Solo Acoustic
-                            </label>
-                            <label for="dj" class="dj list-items">
-                                <input type="checkbox" name="DJ" id="list-dj" class="selections">DJ
-                            </label>
-                            <label for="mc" class="mc list-items">
-                                <input type="checkbox" name="MC" id="list-mc" class="selections">Master Of Ceremonies
-                            </label>
-                            <label for="dance-floor-lighting" class="lighting-dance-floor list-items">
-                            <input type="checkbox" name="Dance Floor Lights" id="lighting-dance-floor">Dance Floor Lights
-                            </label>
-                            <label for="uplighting" class="uplighting list-items">
-                            <input type="checkbox" name="Uplighting" id="lighting-uplighting">Uplighting
-                            </label>
-                        </div>
-                    </div>
-                    <label for="event-vision" required>Event Vision</label>
-                    <input type="text" name="Event Vision">
-                    <label for="search-lead" required>How did you find us?</label>
-                    <input type="text" name="Search Reference">
-                    <button>
-                        <p>Submit</p>
-                    </button>
-                </form>
-            </div>
-            <div class="footer-tag">
-                <div id="social-logos">
-                    <a href="https://www.facebook.com/GregLuceMusic"><img src="img/blue-facebook.png" alt="Greg Luce Music - Facebook logo" id="fb-logo" class="social"></a>
-                    <a href="https://www.instagram.com/greglucemusic/"><img src="img/transparent-instagram.png" alt="Greg Luce Music -Instagram logo" id="ig-logo" class="social"></a>
-                    <a href="https://twitter.com/GregLuceMusic"><img src="img/transparent-twitter.png" alt="Greg Luce Music - Twitter logo" id="tw-logo" class="social"></a>
-                </div>
-                <p>Greg Luce Music 2021</p>
+                <div class="hidden-box"></div>
             </div>
         </div>
+        <div class="nav-box">
+            <nav class="nav">
+                <ul class="mobile-menu">
+                    <li><a class="nav-links" href="../bio/index.html">BIO</a></li>
+                    <li><a class="nav-links" href="../media/index.html">MEDIA</a></li>
+                    <li><a class="nav-links" href="../events/index.html">EVENTS</a></li>
+                    <li><a class="nav-links" href="../reviews/index.html">REVIEWS</a></li>
+                    <li><a class="nav-links" href="../blog/index.html">BLOG</a></li>
+                    <li><a class="nav-links" href="../contact/index.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="phone-number">
+                <a href="tel:18174870886"><h1><img class="phone-icon" src="img/transparent-phone-white.png">817.487.0886</h1></a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="parallax-wrapper">
+        <div class="header-wrapper">
+            <div class="logo-headlines">
+                <div class="logo-text">
+                    <img class="logo" src="img/glm-logo-red.png" alt="red Greg Luce Music logo">
+                    <p id="glm-text">Greg Luce Music<p>
+                </div>
+                <div class="glm-lines">
+                    <p class="glm-description glm-description__left">DJ / One Man Band</p>
+                    <p class="glm-description glm-description__right">Entertaining Dallas, <span class="no-wrap">Fort Worth,</span> and beyond</p>
+                </div>
+            </div>
+        </div>
+        <div class="full-page">  
+            <div class="dj-frame">
+                <div class="text-image-dj">DJ</div>
+                <div class="dj-text">Seamless Sonic Selections</div>
+            </div>
+            <div class="bumper"></div>
+            <div class="text-style" id="glm-dj-frame">
+                <p class="description" id="glm-dj-text">Greg Luce Music provides a personalized touch on all the song selections and works with the client to choose songs from anything to a wedding first dance to a special birthday memory. This is the foundational highlght of any wedding reception or private party entertainment!</p>
+            </div>
+        </div>
+        <div class="full-page">
+            <div class="dj-frame">
+                <div class="text-image-omb">OMB</div>
+                <div class="omb-text">Acoustic Looping Entertainment</div>
+            </div>
+            <div class="bumper"></div>
+            <div class="text-style">
+                <p class="description">One Man Band - this is a unique approach for what Greg Luce Music delivers. Using technology to make digital loops, the performance can be enhanced with layered instrumentation and makes the guests take notice. A presentation of solo acoustic looping is what sets Greg Luce Music apart from others and accentuates any event.</p>
+            </div>  
+        </div>
+        <div class="full-page">
+            <div class="dj-frame">
+                <div class="text-image-mc">MC</div>
+                <div class="mc-text">Personalized Event Presentation</div>
+            </div>
+            <div class="bumper"></div>
+            <div class="text-style">
+                <p class="description">Most every special event needs an Master Of Ceremonies. Greg Luce Music adds this as part of weddings, corporate parties, and fundraisers, working to meet the clients needs and expectations.</p>
+            </div>
+        </div>
+        <div class="full-page">
+            <div class="dj-frame">
+                <div class="text-image-fx">FX</div>
+                <div class="fx-text">Ambience Enhancing Lighting</div>
+            </div>
+            <div class="bumper"></div>
+            <div class="text-style">
+                <p class="description">No party would be complete without special effects! Greg Luce Music can provide anything as simple as a few lights for presentation, to a full production or moving heads, strobes, and even dance lights. Uplighting is also an important element, especially for weddings, in order to set the ambience.</p>
+            </div>
+        </div>
+        <div class="calendar-wrapper">
+            <div class="calendar-api"></div>
+        </div>
+        <div class="video-wrapper-front">
+            <div class="video-player">
+                <iframe src="https://www.youtube.com/embed/a4hIagju_sk" frameborder="0" allowfullscreen class="video-front"></iframe>
+                <h4 class="video-text">Greg Luce Music - Promo Video</h4>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <form action="https://formsubmit.co/greglucemusic@gmail.com" method="POST">
+                <h3>Questions? Get them answered here.</h3>
+                <div class="contact-info">
+                    <div class="top-three">
+                        <label for="name" required>Name</label>
+                        <input type="text" name="Name" required>
+                    </div>
+                    <div class="top-three">
+                        <label for="cell-phone" required>Mobile</label>
+                        <input type="text" name="Cell Phone">
+                    </div>
+                    <div class="top-three">
+                        <label for="email" required>Email</label>
+                        <input type="text" name="Email">
+                    </div>
+                </div>
+                <div class="event-date-type">
+                    <div class="mid-two box1">
+                        <label for="date-of-event" required>Date of Event</label>
+                        <input type="date" value="" name="Date Of Event">
+                    </div>
+                    <div class="mid-two box2">
+                        <label for="event-type" required>Event Type</label>
+                        <div id="event-type">
+                            <select>
+                                <option value="wedding">Wedding</option>
+                                <option value="private-party">Private Party</option>
+                                <option value="corporate-event">Corporate Event</option>
+                                <option value="fundraiser">Fundraiser</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <label for="event-location" required>Event Location</label>
+                <input type="text" name="Event Location">
+                <label for="entertainment-selections" required>What would you like to discuss? (check all that apply)</label>
+                <div class="multi-selections">
+                    <div class="entertainment-checkboxes">
+                        <input type="text" name="Entertainment Selections">
+                        <span class="down-arrow">&blacktriangledown;</span>
+                    </div>
+                    <div class="list">
+                        <label for="omb" class="omb list-items">
+                            <input type="checkbox" name="Solo Acoustic" id="list-omb" class="selections">Solo Acoustic
+                        </label>
+                        <label for="dj" class="dj list-items">
+                            <input type="checkbox" name="DJ" id="list-dj" class="selections">DJ
+                        </label>
+                        <label for="mc" class="mc list-items">
+                            <input type="checkbox" name="MC" id="list-mc" class="selections">Master Of Ceremonies
+                        </label>
+                        <label for="dance-floor-lighting" class="lighting-dance-floor list-items">
+                        <input type="checkbox" name="Dance Floor Lights" id="lighting-dance-floor">Dance Floor Lights
+                        </label>
+                        <label for="uplighting" class="uplighting list-items">
+                        <input type="checkbox" name="Uplighting" id="lighting-uplighting">Uplighting
+                        </label>
+                    </div>
+                </div>
+                <label for="event-vision" required>Event Vision</label>
+                <input type="text" name="Event Vision">
+                <label for="search-lead" required>How did you find us?</label>
+                <input type="text" name="Search Reference">
+                <button>
+                    <p>Submit</p>
+                </button>
+            </form>
+        </div>
+        <div class="footer-tag">
+            <div id="social-logos">
+                <a href="https://www.facebook.com/GregLuceMusic"><img src="img/blue-facebook.png" alt="Greg Luce Music - Facebook logo" id="fb-logo" class="social"></a>
+                <a href="https://www.instagram.com/greglucemusic/"><img src="img/transparent-instagram.png" alt="Greg Luce Music -Instagram logo" id="ig-logo" class="social"></a>
+                <a href="https://twitter.com/GregLuceMusic"><img src="img/transparent-twitter.png" alt="Greg Luce Music - Twitter logo" id="tw-logo" class="social"></a>
+            </div>
+            <p>Greg Luce Music 2021</p>
+        </div>
+    </div>
     
 </body>
 
