@@ -715,6 +715,9 @@ button p {
 .social {
     margin: clamp(0.25rem, 2vw, 0.5rem);
 }
+
+/* Short Form CSS */
+
 .short-form {
     height: 70vh;
     display: flex;
@@ -725,21 +728,22 @@ button p {
     color: white;
     font-size: clamp(1rem, 10vw, 1.5rem);
     padding-bottom: 6px;
-    font-family: Arial;
+    font-family: 'Ubuntu';
     text-align: center;
 }
 .short-form_info_glm {
     color: white;
     font-size: clamp(1.75rem, 10vw, 2.5rem);
     padding-bottom: 20px;
-    font-family: Arial;
+    font-family: 'Ubuntu';
     text-align: center;
 }
 .short-form_layout {
-    background-color:rgb(255, 44, 44);
+    background-color:rgb(210, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 5px solid black;
 }
 .short-form_img_div {
     display: flex;
@@ -770,15 +774,19 @@ button p {
 }
 .short-form_label {
     font-size: 24px;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
+    padding-bottom: 3px;
 }
 .send-button {
-    height: 5vh;
-    width: 60vw;
+    height: 8vh;
+    width: 30vw;
     margin-top: 3vh;
 }
 .send-button p {
-    color: rgb(0, 72, 196);
-    font-size: 18px;
+    color: rgb(65, 1, 130);
+    font-family: 'Ubuntu';
+    font-size: 24px;
     font-weight: bold;
 }
 
