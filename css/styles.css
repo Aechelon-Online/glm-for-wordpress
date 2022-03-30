@@ -459,7 +459,7 @@ li {
 /* Calendar API CSS */
 
 .location, .dateTime {
-    font-size: clamp(18px, 5vw, 32px);
+    font-size: clamp(12px, 4.3vw, 32px);
     padding: 3px;
 }
 .calendar-wrapper {
@@ -479,8 +479,8 @@ li {
 }
 .date-wrapper {
     background-color:rgb(200, 255, 255);
-    height: clamp(100px, 40vw, 250px);
-    width: max-content;
+    height: clamp(100px, 30vw, 200px);
+    width: clamp(250px, 90vw, 600px);
     display: flex;
     padding: 20px;
     margin: 10px;
@@ -494,10 +494,10 @@ li {
     background-color:rgb(200, 255, 255);
 }
 .year {
-    font-size: clamp(18px, 10vw, 48px);
+    font-size: clamp(28px, 8vw, 48px);
 }
 .day {
-    font-size: clamp(24px, 15vw, 70px);
+    font-size: clamp(40px, 12vw, 70px);
 }
 
 .big-date {
