@@ -275,7 +275,7 @@ li {
 .parallax-wrapper .full-page {
     position: relative;
     width: 100vw;
-    height: 175vh;
+    height: 185vh;
     background-blend-mode: multiply;
     transform-style: preserve-3d;
 }
@@ -316,7 +316,7 @@ li {
 }
 
 .dj-text, .omb-text, .mc-text, .fx-text {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     font-family: 'Roboto Mono';
 }
 
@@ -361,7 +361,7 @@ li {
 
 .bumper {
     width: 100%;
-    height: 85vh;
+    height: 90vh;
 }
 
 .text-image-dj {

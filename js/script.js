@@ -38,16 +38,16 @@ async function getData () {
     console.log(data)
 
     
-    for (let i = 0; i < data['items'].length; i++) {
+  for (let i = 0; i < data['items'].length; i++) {
     const summary = data["items"][i]['summary']
     const location = data['items'][i]['location']
     const locationParts = location.split(",")
     const venue = locationParts[0]
     // const street = locationParts[1]
-    const city = locationParts[2]
-    const stateAndZip = locationParts[3]
-    const stateSplit = stateAndZip.split(" ")
-    const state = stateSplit[1]
+    let city = locationParts[2]
+    let stateAndZip = locationParts[3]
+    let stateSplit = stateAndZip.split(" ")
+    let state = stateSplit[1]
 
 
     const dateTime = data['items'][i]['start']['dateTime']
@@ -58,11 +58,16 @@ async function getData () {
     const month = monthDateSplit[0]
     const date = monthDateSplit[1]
 
-    console.log(stateAndZip)
-    console.log(stateSplit)
-    console.log(state)
-
+    // console.log(location)
     
+    if (summary === 'Tommy Bahamas') {
+    city = locationParts[3]
+    stateAndZip = locationParts[4]
+    stateSplit = stateAndZip.split(" ")
+    state = stateSplit[1]
+    }
+    
+   
     document.querySelector(".calendar-api").innerHTML += 
     `
     <div class="date-wrapper">
@@ -72,11 +77,11 @@ async function getData () {
       </div>
       <div class="date-loc">
           <h1 class="location"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></h1>
-          <h1 class="location"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${city + " " + state}</h1>
+          <h1 class="location">${city + " " + state}</h1>
           <h1 class="dateTime">${realTime}</h1>
         </div>
     </div>
     `
-    }
+  }
 }
 getData()
