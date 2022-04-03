@@ -48,7 +48,7 @@ async function getData () {
     let stateAndZip = locationParts[3]
     let stateSplit = stateAndZip.split(" ")
     let state = stateSplit[1]
-
+    console.log(summary)
 
     const dateTime = data['items'][i]['start']['dateTime']
     const realDate = moment(dateTime).format('LL')
@@ -66,7 +66,13 @@ async function getData () {
     stateSplit = stateAndZip.split(" ")
     state = stateSplit[1]
     }
-    
+
+    if (summary.includes("Private")) {
+      city = locationParts[1]
+      stateAndZip = locationParts[2]
+      stateSplit = stateAndZip.split(" ")
+      state = stateSplit[1]
+    } 
    
     document.querySelector(".calendar-api").innerHTML += 
     `
