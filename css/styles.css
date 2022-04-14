@@ -427,7 +427,7 @@ li {
 }
 .video-wrapper-front {
     background-color: black;
-    padding-top: 5vw;
+    padding-top: 0vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -455,6 +455,10 @@ li {
     width: clamp(250px, 80vw, 400px);
     aspect-ratio: 16 / 9;
 }
+.video-front {
+    width: clamp(250px, 70vw, 800px);
+    aspect-ratio: 16 / 9;
+}
 
 /* Calendar API CSS */
 
@@ -466,14 +470,15 @@ li {
     background-color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
-    height: 400px;
+    /* height: 400px; */
     overflow-x: scroll;
 }
 
 .calendar-api {
     background-color: rgb(0, 0, 0);
     display: flex;
-    height: 400px;
+    margin-top: 5vw;
+    height: clamp(250px, 60vw, 300px);
     justify-content: center;
     align-items: center;
 }
@@ -525,10 +530,10 @@ h1 a {
 .footer-wrapper {
     background-color: #000;
     width: 100vw;
-    height: 85vh;
+    height: 100vh;
     margin: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     flex-flow: column;
 }
@@ -560,7 +565,7 @@ span {
 
 form {
     width: 90%;
-    height: 65vh;
+    height: 90%;
     overflow: scroll;
     background-color: rgba(54, 0, 126, 0.918);
     border-radius: 10px;
@@ -1039,7 +1044,8 @@ section h4 {
     }
 
     .video-front {
-        width: clamp(250px, 80vw, 600px);
+        width: clamp(800px, 70vw, 1200px);
+        aspect-ratio: 16 / 9;
     }
 
     .video-wrapper {
