@@ -43,12 +43,13 @@ async function getData () {
     const location = data['items'][i]['location']
     const locationParts = location.split(",")
     const venue = locationParts[0]
-    // const street = locationParts[1]
+
     let city = locationParts[2]
     let stateAndZip = locationParts[3]
     let stateSplit = stateAndZip.split(" ")
     let state = stateSplit[1]
-    console.log(summary)
+    
+    
 
     const dateTime = data['items'][i]['start']['dateTime']
     const realDate = moment(dateTime).format('LL')
@@ -58,7 +59,10 @@ async function getData () {
     const month = monthDateSplit[0]
     const date = monthDateSplit[1]
 
+    // console.log(dateSplit)
+    console.log(summary)
     // console.log(location)
+
     
     if (summary === 'Tommy Bahamas') {
     city = locationParts[3]
@@ -67,7 +71,7 @@ async function getData () {
     state = stateSplit[1]
     }
 
-    if (summary.includes("Private")) {
+    if (summary.includes("Private") || summary.includes("Colony")) {
       city = locationParts[1]
       stateAndZip = locationParts[2]
       stateSplit = stateAndZip.split(" ")
@@ -82,10 +86,10 @@ async function getData () {
         <h1 class="day">${date}</h1>
       </div>
       <div class="date-loc">
-          <h1 class="location"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></h1>
-          <h1 class="location">${city + " " + state}</h1>
-          <h1 class="dateTime">${realTime}</h1>
-        </div>
+        <h1 class="location"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></h1>
+        <h1 class="location">${city + " " + state}</h1>
+        <h1 class="dateTime">${realTime}</h1>
+      </div>
     </div>
     `
   }

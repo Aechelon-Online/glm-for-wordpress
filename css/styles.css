@@ -13,10 +13,6 @@ html, body, * {
     --social-logo-width: clamp(2rem, 3vw, 3rem);
 }
 
-/* #wpadminbar {
-    top: auto;
-    bottom: 0;
-} */
 
 /* Animation Keyframes */
 
@@ -59,7 +55,7 @@ html, body, * {
 }
 
 @keyframes upAndFade {
-    80% {opacity: 1;}
+    80% {opacity: 1; height: 100vh;}
     90% {opacity: 0; height: 100vh;}
     100% {opacity: 0; height: 0vh;}
 }
@@ -109,7 +105,7 @@ html, body, * {
     height: 100vh;
     position: relative;
     z-index: 10;
-    animation: fadeToBlackAndUp 6s ease-in var(--animation-state);
+    animation: fadeToBlackAndUp 6s ease-out var(--animation-state);
 }
 
 
@@ -126,7 +122,7 @@ html, body, * {
     align-items: center;
     flex-flow: column;
     height: var(--bg-img-ht);
-    animation: upAndFade 6s ease-in-out forwards;
+    animation: upAndFade 6s forwards;
 }
 .logo-headlines__page {
     width: 80%;
@@ -425,6 +421,9 @@ li {
     position: absolute;
     transform: translateZ(5px) scale(0.95);
 }
+
+/* Video CSS */
+
 .video-wrapper-front {
     background-color: black;
     padding-top: 0vw;
@@ -470,7 +469,6 @@ li {
     background-color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
-    /* height: 400px; */
     overflow-x: scroll;
 }
 
@@ -483,14 +481,17 @@ li {
     align-items: center;
 }
 .date-wrapper {
+    font-family: Helvetica;
+    font-weight: 200;
     background-color:rgb(200, 255, 255);
     height: clamp(100px, 30vw, 200px);
-    width: clamp(250px, 90vw, 600px);
+    width: 90vw;
     display: flex;
     padding: 20px;
-    margin: 10px;
+    margin: 0 5vw;
     box-shadow: inset 0px 0px 3px 3px blue;
 }
+
 
 .year, .day {
     display: flex;
@@ -525,7 +526,25 @@ h1 a {
     background-color: rgb(200, 255, 255);
 }
 
+@media only screen and (min-width: 750px) {
+    .date-wrapper {
+        width: 46vw;
+        margin: 0 2vw;
+    }
+    .location, .dateTime {
+        font-size: clamp(12px, 3vw, 28px);
+    }
+}
 
+@media only screen and (min-width: 1200px) {
+    .date-wrapper {
+        width: 30vw;
+        margin: 0 1.5vw;
+    }
+    .location, .dateTime {
+        font-size: clamp(12px, 2vw, 28px);
+    }
+}
 
 .footer-wrapper {
     background-color: #000;
@@ -653,6 +672,7 @@ select {
 }
 
 .entertainment-checkboxes {
+    position: relative;
     border: 2px solid black;
 }
 
@@ -662,7 +682,10 @@ select {
     outline: none;
     border: none;
 }
-
+.multi-selections {
+    position: relative;
+    display: inline-block;
+}
 
 .down-arrow {
     padding-left: 0.5vw;
@@ -674,6 +697,7 @@ select {
     display: none;
 }
 .show {
+    position: absolute;
     display: block;
 }
 
