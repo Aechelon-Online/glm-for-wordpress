@@ -23,7 +23,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
-        <script async src="../js/script.js"></script>
+        <script async src="../js/script-events.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body class="page-body">
     <div class="header-page">
@@ -62,7 +65,11 @@
         </div>
     </div>
     <h1 class="title-text">Events</h1>
-    
+    <div class="calendar-wrapper-events">
+        <div class="calendar-api-events">
+        </div>
+    </div>
+    <div class="entertainment-checkboxes"></div>
     <div class="footer-tag">
         <div id="social-logos">
             <a href="https://www.facebook.com/GregLuceMusic" target="_blank"><img src="../img/blue-facebook.png" alt="Greg Luce Music - Facebook logo" id="fb-logo" class="social"></a>

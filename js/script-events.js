@@ -78,17 +78,17 @@ async function getData () {
       state = stateSplit[1]
     } 
    
-    document.querySelector(".calendar-api").innerHTML += 
+    document.querySelector(".calendar-api-events").innerHTML += 
     `
-    <div class="date-wrapper">
+    <div class="date-wrapper-events">
       <div class="big-date">
         <h1 class="year">${month}</h1>
         <h1 class="day">${date}</h1>
       </div>
       <div class="date-loc">
-        <h1 class="location"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></h1>
-        <h1 class="location">${city + " " + state}</h1>
-        <h1 class="dateTime">${realTime}</h1>
+        <h1 class="location-events"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></h1>
+        <h1 class="location-events">${city + " " + state}</h1>
+        <h1 class="dateTime-events">${realTime}</h1>
       </div>
     </div>
     `
