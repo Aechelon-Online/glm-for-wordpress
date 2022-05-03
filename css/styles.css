@@ -427,6 +427,7 @@ li {
 .video-wrapper-front {
     background-color: black;
     padding-top: 0vw;
+    padding-bottom: 8vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -627,136 +628,107 @@ span {
     white-space: nowrap;
 }
 
+/* CSS for Submit Form */
 
-form {
-    width: 90%;
+.container {
+    background-color: black;
+    max-width: 960px;
+    min-width: 280px;
+    height: 80vh;
+    min-height: 500px;
+}
+.form-box {
+    background: rgba(128, 0, 128);
     height: 90%;
-    overflow: scroll;
-    background-color: rgba(54, 0, 126, 0.918);
-    border-radius: 10px;
-    max-width: 750px;
-    padding: 1vw;
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
+    min-height: 500px;
+    width: clamp(280px, 80vw, 875px);
 }
-.contact-info,  .event-date-type {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.event-type {
+    padding-bottom: 0.275rem
 }
-.top-three, .mid-two {
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-flow: column;
-}
-.top-three input {
-    width: 90%;
-}
-#event-type {
-    width: 95%;
-    margin: 1px clamp(0rem, 1vw, 0.5rem);
-    height: clamp(1.25rem, 3vw, 1.25rem);
-    background: rgba(211, 219, 253, 0.9);
-    border-radius: 5px;
+.select-field {
+    border: none;
+    border-radius: 2px;
 }
 
-.greeting h3 {
-    color: red;
-    text-align: center;
-    margin-left: clamp(0.5rem, 1vw, 100px);
-    font-family: 'Red Hat Display';
-    font-size: clamp(2.5rem, 4vw, 4rem);
+h3 {
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+    color: white;
 }
 label {
-    margin: 0 clamp(0.5rem, 1vw, 100px);
-    font-size: clamp(0.8rem, 3vw, 1rem);
-    color: rgb(255, 254, 254);
-    font-family: 'Red Hat Display'; 
+    font-size: clamp(0.75rem, 4vw, 1.25rem);
+    color: white;
 }
-
-
 input {
-    margin: 2px clamp(0rem, 1vw, 0.5rem);
-    height: clamp(1.25rem, 3vw, 1rem);
-    background: rgba(211, 219, 253, 0.9);
-    border-radius: 5px;
+    width: 100%;
 }
-
 select {
     width: 100%;
-    box-shadow: 1px 1px gray;
-    margin-bottom: clamp(0.5rem, 2vw, 1rem) 0;
-    height: clamp(1.5rem, 3vw, 1rem);
-    background: rgba(211, 219, 253, 0.9);
-    border-radius: 5px;
-}
-.selections {
-    cursor: pointer;
+    height: 110%;
 }
 
-.box2 {
-    margin-bottom: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
+/* CSS for Checkboxes */
 
 .list-items {
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    color: #000;
+    padding-left: 0.5rem;
+    color: #fff;
+}
+.selections {
+    width: 15px;
+    height: 15px;
+}
+.picks {
+    margin: auto 0;
+    padding: 0 5px;
+    font-size: clamp(0.75rem, 4vw, 1.2rem)
 }
 
 .entertainment-checkboxes, .list {
-    width: auto;
-    margin: 2px clamp(0rem, 1vw, 0.5rem);
-    background: rgba(211, 219, 253, 0.9);
+    background: rgba(128, 0, 128, 0.9);
     border-radius: 5px;
 }
 
-.entertainment-checkboxes {
-    position: relative;
-    border: 2px solid black;
-}
 
-.entertainment-checkboxes input { 
-    width: 0;
-    margin: 0; 
-    outline: none;
-    border: none;
-}
 .multi-selections {
     position: relative;
     display: inline-block;
 }
 
 .down-arrow {
-    padding-left: 0.5vw;
+    position: absolute;
+    left: 1rem;
+    top: -0.65rem;
+    font-size: 30px;
     cursor: pointer;
 }
 .list {
-    font-family: 'Red Hat Display';
+    position: absolute;
     margin: 0;
     display: none;
 }
 .show {
-    position: absolute;
     display: block;
 }
 
-button {
+/* CSS for Submit Button */
+
+.sub-button {
     margin: clamp(0.5rem, 1vw, 100px);
     width: clamp(80px, 15vw, 0%);
     height: clamp(30px, 3vw, 30px);
     background-color: rgba(250, 255, 255, 0.836);
     border-radius: 5px;
 }
-button p {
+.sub-button p {
     font-size: clamp(1rem, 1vw, 2rem);
 }
+
+
 .footer-tag {
     color: white;
     padding-bottom: 1vw;
