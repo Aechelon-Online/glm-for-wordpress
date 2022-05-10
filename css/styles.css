@@ -279,7 +279,7 @@ li {
     background: rgba(0, 38, 255, 0.322) url('../img/dj-mixer-side.png');
     background-size: cover;
     background-position: center;
-    transform: translateZ(10px) transformY(6vw) scale(1.1);
+    transform: translateZ(10px) translateY(6vw) scale(1.1);
 }
 .parallax-wrapper .full-page:nth-child(3) {
     background: rgba(253, 253, 60, 0.3) url('../img/omb-pic.jpg');
@@ -346,11 +346,7 @@ li {
     text-shadow: 1px 1px black;
     padding: 5vw;
 }
-#glm-dj-text {
-    font-size: clamp(20px, 4.5vw, 48px);
-    padding: 0;
-    margin: -5vw;
-}
+
 #glm-dj-frame {
     display: flex;
 }
@@ -475,6 +471,7 @@ li {
 .location, .dateTime {
     font-size: clamp(12px, 4.3vw, 28px);
     padding: 3px;
+    margin-bottom: 0;
 }
 
 .location-events, .dateTime-events {
@@ -547,10 +544,11 @@ li {
     background-color:rgb(200, 255, 255);
 }
 .year {
-    font-size: clamp(28px, 8vw, 48px);
+    font-size: clamp(24px, 7vw, 48px);
 }
 .day {
-    font-size: clamp(40px, 12vw, 70px);
+    font-size: clamp(40px, 10vw, 70px);
+    margin-bottom: 0;
 }
 
 .big-date {
@@ -579,7 +577,7 @@ h1 a {
         margin: 0 2vw;
     }
     .location, .dateTime {
-        font-size: clamp(12px, 3vw, 25px);
+        font-size: clamp(12px, 3vw, 26px);
     }
 }
 
@@ -589,7 +587,7 @@ h1 a {
         margin: 0 1.5vw;
     }
     .location, .dateTime {
-        font-size: clamp(12px, 2vw, 25px);
+        font-size: clamp(12px, 1.8vw, 24px);
     }
 }
 

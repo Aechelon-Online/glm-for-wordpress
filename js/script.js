@@ -60,8 +60,8 @@ async function getData () {
     const date = monthDateSplit[1]
 
     // console.log(dateSplit)
-    console.log(summary)
-    // console.log(location)
+    // console.log(summary)
+    console.log(location)
 
     
     if (summary === 'Tommy Bahamas') {
@@ -77,6 +77,7 @@ async function getData () {
       stateSplit = stateAndZip.split(" ")
       state = stateSplit[1]
     } 
+
    
     document.querySelector(".calendar-api").innerHTML += 
     `
