@@ -312,7 +312,7 @@ li {
 }
 
 .dj-text, .omb-text, .mc-text, .fx-text {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgb(255, 255, 255);
     font-family: 'Roboto Mono';
 }
 
@@ -764,31 +764,36 @@ select {
 /* Short Form CSS */
 
 .short-form {
-    height: 70vh;
+    height: clamp(400px, 5vw, 600px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .short-form_info {
     color: white;
-    font-size: clamp(1rem, 10vw, 1.5rem);
+    font-size: clamp(1.4rem, 5vw, 1.5rem);
     padding-bottom: 6px;
     font-family: 'Ubuntu';
     text-align: center;
 }
 .short-form_info_glm {
     color: white;
-    font-size: clamp(1.75rem, 10vw, 2.5rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     padding-bottom: 20px;
     font-family: 'Ubuntu';
     text-align: center;
 }
 .short-form_layout {
     background-color:rgb(210, 0, 0);
+    width: clamp(250px, 50vw, 400px);
+    height: 90%;
     display: flex;
+    flex-direction: column;
+    margin: 2vw;
     justify-content: center;
     align-items: center;
     border: 5px solid black;
+    border-radius: 5px;
 }
 .short-form_img_div {
     display: flex;
@@ -802,34 +807,35 @@ select {
 .contact-info_short-form {
     display: flex;
     flex-flow: column;
+    width: 80%;
 }
 .short-form_inputs {
-    width: 70vw;
-    height: 15vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-flow: column;
 }
 .short-form_text {
-    height: 10vh;
+    height: clamp(40px, 5vw, 60px);
     font-size: 20px;
     background-color:rgb(255, 252, 228);
     text-align: center;
 }
 .short-form_label {
-    font-size: 24px;
+    font-size: clamp(1rem, 4vw, 1.3rem);
     font-family: 'Ubuntu';
     font-weight: lighter;
     padding-bottom: 3px;
 }
 .send-button {
-    height: 8vh;
-    width: 30vw;
-    margin-top: 3vh;
+    width: 110px;
+    padding: 5px;
+    margin: 3vh;
+    /* box-shadow: 0px 2px 5px #000; */
 }
 .send-button p {
-    color: rgb(65, 1, 130);
+    color: rgb(205, 0, 0);
     font-family: 'Ubuntu';
     font-size: 24px;
     font-weight: bold;
