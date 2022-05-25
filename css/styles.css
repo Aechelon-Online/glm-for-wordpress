@@ -221,9 +221,10 @@ html, body, * {
     animation: fadeIn 2s ease-in var(--animation-state);
 }
 .phone-number h1 {
-    color: transparent;
+    color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
+    text-shadow: 1px 1px 5px #000;
     font-family: Arial, Helvetica, sans-serif;
 }
 .phone-number a {
@@ -635,9 +636,14 @@ span {
     height: 80vh;
     min-height: 500px;
 }
+
+form {
+    width: clamp(280px, 80vw, 875px);
+}
+
 .form-box {
     background: rgba(128, 0, 128);
-    height: 90%;
+    height: fit-content;
     min-height: 500px;
     width: clamp(280px, 80vw, 875px);
 }
@@ -721,6 +727,7 @@ select {
     height: clamp(30px, 3vw, 30px);
     background-color: rgba(250, 255, 255, 0.836);
     border-radius: 5px;
+    /* margin-top: 1rem; */
 }
 .sub-button p {
     font-size: clamp(1rem, 1vw, 2rem);
@@ -786,7 +793,7 @@ select {
 .short-form_layout {
     background-color:rgb(210, 0, 0);
     width: clamp(250px, 90vw, 400px);
-    height: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin: 2vw;
@@ -928,6 +935,11 @@ select {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.section-wrapper a, .section-wrapper a:focus, .section-wrapper a:visited {
+        text-decoration: underline;
+        color: rgb(200, 251, 255);
 }
 
 section {
