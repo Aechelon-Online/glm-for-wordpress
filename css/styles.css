@@ -637,16 +637,20 @@ span {
     min-height: 500px;
 }
 
-form {
-    width: clamp(280px, 80vw, 875px);
-}
+
 
 .form-box {
     background: rgba(128, 0, 128);
     height: fit-content;
     min-height: 500px;
+    /* max-width: 960px; */
     width: clamp(280px, 80vw, 875px);
 }
+.form-header {
+    font-size: clamp(1rem, 3vw, 2rem);
+    color: white;
+}
+
 .event-type {
     padding-bottom: 0.275rem
 }
@@ -660,7 +664,7 @@ h3 {
     color: white;
 }
 label {
-    font-size: clamp(0.75rem, 4vw, 1.25rem);
+    font-size: clamp(0.625rem, 3vw, 1.25rem);
     color: white;
 }
 input {
@@ -727,7 +731,7 @@ select {
     height: clamp(30px, 3vw, 30px);
     background-color: rgba(250, 255, 255, 0.836);
     border-radius: 5px;
-    /* margin-top: 1rem; */
+    margin-top: 1rem;
 }
 .sub-button p {
     font-size: clamp(1rem, 1vw, 2rem);
@@ -771,29 +775,29 @@ select {
 /* Short Form CSS */
 
 .short-form {
-    height: clamp(400px, 5vw, 600px);
+    height: clamp(450px, 85vw, 700px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .short-form_info {
     color: white;
-    font-size: clamp(1.4rem, 5vw, 1.5rem);
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
     padding-bottom: 6px;
     font-family: 'Ubuntu';
     text-align: center;
 }
 .short-form_info_glm {
     color: white;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
-    padding: 20px 0;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    padding: 10px 0;
     font-family: 'Ubuntu';
     text-align: center;
 }
 .short-form_layout {
     background-color:rgb(210, 0, 0);
-    width: clamp(250px, 90vw, 400px);
-    height: 100%;
+    width: clamp(250px, 90vw, 500px);
+    height: 120%;
     display: flex;
     flex-direction: column;
     margin: 2vw;
@@ -825,7 +829,7 @@ select {
     flex-flow: column;
 }
 .short-form_text {
-    height: clamp(40px, 5vw, 60px);
+    height: clamp(30px, 5vw, 60px);
     font-size: 20px;
     background-color:rgb(255, 252, 228);
     text-align: center;
@@ -838,7 +842,7 @@ select {
 }
 .send-button {
     width: 110px;
-    padding: 5px;
+    padding: 3px;
     margin: 3vh;
     /* box-shadow: 0px 2px 5px #000; */
 }
@@ -905,15 +909,20 @@ select {
     justify-content: center;
 }
 .email-contact {
-    font-size: clamp(0.75rem, 2vw, 1.5rem);
+    
     padding: 0 2vw;
     background-color: transparent;
     z-index: 999;
 }
 
+.email-text {
+    padding: 2vw;
+    font-size: clamp(0.75rem, 6vw, 2.5rem);
+}
+
 .phone-number-contact {
-    font-size: clamp(0.75rem, 2vw, 1.5rem);
-    padding: 0 2vw;
+    font-size: clamp(0.75rem, 6vw, 2.5rem);
+    padding: 2vw;
     background-color: transparent;
     z-index: 999;
 }
@@ -1083,7 +1092,9 @@ section h4 {
     .footer-wrapper {
         padding-bottom: 2vw;
     }
+}
 
+@media only screen and (max-width: 750px) {
     .email-phone {
         padding-top: 2vw;
         display: flex;
@@ -1095,15 +1106,15 @@ section h4 {
     .email-phone h1 {
         padding: 1vw;
     }
-
 }
+
 @media only screen and (min-width: 1250px) {
     .video {
         width: clamp(350px, 30vw, 450px);
     }
 
     .video-front {
-        width: clamp(800px, 70vw, 1200px);
+        width: 800px;
         aspect-ratio: 16 / 9;
     }
 
