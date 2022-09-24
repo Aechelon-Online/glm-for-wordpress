@@ -49,7 +49,7 @@ async function getData () {
     let stateSplit = stateAndZip.split(" ")
     let state = stateSplit[1]
     
-    
+    console.log(stateSplit)
 
     const dateTime = data['items'][i]['start']['dateTime']
     const realDate = moment(dateTime).format('ll')

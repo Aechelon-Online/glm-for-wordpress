@@ -548,7 +548,7 @@ li {
     font-size: clamp(24px, 7vw, 48px);
 }
 .day {
-    font-size: clamp(40px, 10vw, 70px);
+    font-size: clamp(40px, 8vw, 70px);
     margin-bottom: 0;
 }
 
@@ -568,6 +568,16 @@ li {
     align-items: flex-start;
     margin-left: 10px;
 }
+
+.date-loc-events {
+    background-color:rgb(200, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
 h1 a {
     background-color: rgb(200, 255, 255);
 }
@@ -774,6 +784,10 @@ select {
 
 /* Short Form CSS */
 
+.short-form-body {
+    background-color: black;
+}
+
 .short-form {
     height: clamp(450px, 85vw, 700px);
     display: flex;
@@ -784,27 +798,27 @@ select {
     color: white;
     font-size: clamp(1.2rem, 5vw, 1.5rem);
     padding-bottom: 6px;
-    font-family: 'Ubuntu';
     text-align: center;
 }
 .short-form_info_glm {
     color: white;
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    padding: 10px 0;
-    font-family: 'Ubuntu';
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    padding: 20px 10px;
     text-align: center;
 }
 .short-form_layout {
-    background-color:rgb(210, 0, 0);
-    width: clamp(250px, 90vw, 500px);
-    height: 120%;
+    background-color:rgb(0, 0, 0);
+    width: clamp(230px, 90vw, 500px);
+    height: 90%;
     display: flex;
     flex-direction: column;
     margin: 2vw;
     justify-content: center;
     align-items: center;
-    border: 5px solid black;
-    border-radius: 5px;
+    border: 5px solid rgba(255, 200, 0, 0.85);
+    border-radius: 50px;
+    letter-spacing: 1px;
+    font-family: 'Inter Tight';
 }
 .short-form_img_div {
     display: flex;
@@ -829,7 +843,7 @@ select {
     flex-flow: column;
 }
 .short-form_text {
-    height: clamp(30px, 5vw, 60px);
+    height: clamp(30px, 8vw, 60px);
     font-size: 20px;
     background-color:rgb(255, 252, 228);
     text-align: center;
@@ -843,11 +857,11 @@ select {
 .send-button {
     width: 110px;
     padding: 3px;
-    margin: 3vh;
-    /* box-shadow: 0px 2px 5px #000; */
+    margin: 10px 10px 30px 10px;
+    background-color:rgb(50, 50, 50)
 }
 .send-button p {
-    color: rgb(205, 0, 0);
+    color: rgba(255, 200, 0, 0.85);
     font-family: 'Ubuntu';
     font-size: 24px;
     font-weight: bold;
