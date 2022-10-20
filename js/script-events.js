@@ -71,7 +71,7 @@ async function getData () {
     state = stateSplit[1]
     }
 
-    if (summary.includes("Private") || summary.includes("Colony") || summary.includes("Honest")) {
+    if (summary.includes("Private") || summary.includes("Colony")) {
       city = locationParts[1]
       stateAndZip = locationParts[2]
       stateSplit = stateAndZip.split(" ")

@@ -1,3 +1,5 @@
+
+
 html, body, * {
     margin: 0;
     padding: 0;
@@ -5,6 +7,8 @@ html, body, * {
 }
 
 :root {
+    --bg-orange: rgb(255, 135, 80);
+    --border-color: rgb(251, 71, 0);
     --logo-size: 50vw;
     --bg-img-ht: 100vh;
     --logo-size-page: calc(var(--logo-size) / 2);
@@ -516,19 +520,19 @@ li {
 .date-wrapper {
     font-family: Helvetica;
     font-weight: 200;
-    background-color:rgb(200, 255, 255);
+    background-color: var(--bg-orange);
     height: clamp(100px, 30vw, 200px);
     width: 90vw;
     display: flex;
     padding: 20px;
     margin: 5vw;
-    box-shadow: inset 0px 0px 3px 3px blue;
+    box-shadow: inset 0px 0px 3px 3px var(--border-color);
 }
 
 .date-wrapper-events {
     font-family: Helvetica;
     font-weight: 200;
-    background-color:rgb(200, 255, 255);
+    background-color:var(--bg-orange);
     height: clamp(100px, 30vw, 200px);
     width: clamp(260px, 90vw, 700px);
     display: flex;
@@ -542,7 +546,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:rgb(200, 255, 255);
+    background-color:var(--bg-orange);
 }
 .year {
     font-size: clamp(24px, 7vw, 48px);
@@ -558,10 +562,10 @@ li {
     align-items: center;
     flex-direction: column;
     margin: 0 10px;
-    background-color: rgb(200, 255, 255);
+    background-color: var(--bg-orange);
 }
 .date-loc {
-    background-color:rgb(200, 255, 255);
+    background-color:var(--bg-orange);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -570,7 +574,7 @@ li {
 }
 
 .date-loc-events {
-    background-color:rgb(200, 255, 255);
+    background-color:var(--bg-orange);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -579,7 +583,7 @@ li {
 }
 
 h1 a {
-    background-color: rgb(200, 255, 255);
+    background-color: var(--bg-orange);
 }
 
 @media only screen and (min-width: 750px) {
@@ -667,6 +671,8 @@ span {
 .select-field {
     border: none;
     border-radius: 2px;
+    /* -webkit-appearance: initial; */
+    line-height: 22px;
 }
 
 h3 {
@@ -797,13 +803,13 @@ select {
 .short-form_info {
     color: white;
     font-size: clamp(1.2rem, 5vw, 1.5rem);
-    padding-bottom: 6px;
+    padding-bottom: 10px;
     text-align: center;
 }
 .short-form_info_glm {
     color: white;
     font-size: clamp(1.5rem, 6vw, 2.5rem);
-    padding: 20px 10px;
+    padding: 10px 10px;
     text-align: center;
 }
 .short-form_layout {
@@ -857,7 +863,8 @@ select {
 .send-button {
     width: 110px;
     padding: 3px;
-    margin: 10px 10px 30px 10px;
+    margin: 15px 10px 30px 10px;
+    border-radius: 5px;
     background-color:rgb(50, 50, 50)
 }
 .send-button p {
@@ -923,7 +930,6 @@ select {
     justify-content: center;
 }
 .email-contact {
-    
     padding: 0 2vw;
     background-color: transparent;
     z-index: 999;
