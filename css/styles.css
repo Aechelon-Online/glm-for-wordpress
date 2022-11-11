@@ -270,6 +270,10 @@ li {
     color: rgb(72, 115, 253);
 }
 
+.title-margin {
+    margin-top: 10vh;
+}
+
 /* Parallax Full Page CSS */
 
 
@@ -528,7 +532,7 @@ li {
 
 .date-wrapper {
     font-family: Helvetica;
-    font-weight: 200;
+    font-weight: 400;
     background-color: var(--bg-orange);
     height: clamp(100px, 30vw, 200px);
     width: 90vw;
@@ -540,7 +544,7 @@ li {
 
 .date-wrapper-events {
     font-family: Helvetica;
-    font-weight: 200;
+    font-weight: 400;
     background-color:var(--bg-orange);
     height: clamp(100px, 30vw, 200px);
     width: clamp(260px, 90vw, 700px);
@@ -556,13 +560,13 @@ li {
     justify-content: center;
     align-items: center;
     background-color:var(--bg-orange);
+    margin: 0;
 }
 .year {
     font-size: clamp(24px, 7vw, 48px);
 }
 .day {
     font-size: clamp(40px, 8vw, 70px);
-    margin-bottom: 0;
 }
 
 .big-date {
@@ -613,6 +617,10 @@ h1 a {
     .location, .dateTime {
         font-size: clamp(12px, 1.8vw, 24px);
     }
+}
+
+p {
+    margin-bottom: 0;
 }
 
 .footer-wrapper {

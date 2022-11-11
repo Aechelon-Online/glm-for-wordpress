@@ -84,13 +84,13 @@ async function getData () {
     `
     <div class="date-wrapper">
       <div class="big-date">
-        <h1 class="year">${month}</h1>
-        <h1 class="day">${date}</h1>
+        <p class="year">${month}</p>
+        <p class="day">${date}</p>
       </div>
       <div class="date-loc">
-        <h1 class="location"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></h1>
-        <h1 class="location">${city + " " + state}</h1>
-        <h1 class="dateTime">${realTime}</h1>
+        <p class="location"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></p>
+        <p class="location">${city + " " + state}</p>
+        <p class="dateTime">${realTime}</p>
       </div>
     </div>
     `
