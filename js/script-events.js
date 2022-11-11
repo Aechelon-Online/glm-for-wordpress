@@ -52,7 +52,7 @@ async function getData () {
     
 
     const dateTime = data['items'][i]['start']['dateTime']
-    const realDate = moment(dateTime).format('LL')
+    const realDate = moment(dateTime).format('ll')
     const realTime = moment(dateTime).format('LT')
     const dateSplit = realDate.split(",",1).toString()
     const monthDateSplit = dateSplit.split(" ")

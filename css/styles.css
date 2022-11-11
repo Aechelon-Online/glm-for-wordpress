@@ -54,7 +54,7 @@ html, body, * {
 }
 
 @keyframes fadeIn {
-    0%, 50% {opacity: 0;}
+    0%, 80% {opacity: 0;}
     100% {opacity: 1;}
 }
 
@@ -109,7 +109,7 @@ html, body, * {
     height: 100vh;
     position: relative;
     z-index: 10;
-    animation: fadeToBlackAndUp 6s ease-out var(--animation-state);
+    animation: fadeToBlackAndUp 4s ease-out var(--animation-state);
 }
 
 
@@ -126,7 +126,7 @@ html, body, * {
     align-items: center;
     flex-flow: column;
     height: var(--bg-img-ht);
-    animation: upAndFade 6s forwards;
+    animation: upAndFade 4s forwards;
 }
 .logo-headlines__page {
     width: 80%;
@@ -142,6 +142,9 @@ html, body, * {
     align-items: center;
     flex-flow: column;
 }
+
+
+
 .logo {
     width: clamp(100px, var(--logo-size), 400px);
     padding: 1vw;
@@ -149,6 +152,12 @@ html, body, * {
     transform: scale(1);
     animation: logoMove 0.5s ease-in var(--animation-state);
 }
+
+.logo-front {
+        width: clamp(80px, 10vw, 160px);
+        margin-bottom: clamp(5px, 2vw, 10px);
+}
+
 .logo__page {
     width: clamp(105px, var(--logo-size-page), 210px);
 }
@@ -162,6 +171,14 @@ html, body, * {
     transform: scale(0.8);
     animation: scaleForwardFade 1.5s ease-in-out var(--animation-state);
 }
+
+#glm-text-front {
+    font-size: clamp(0.6rem, 1.1vw, 1.05rem);
+    font-family: 'Roboto Mono';
+    color: red;
+    margin-bottom: 0;
+}
+
 #glm-text__page {
     width: 100%;
     font-size: clamp(0.75rem, var(--logo-with-text), 1.5rem);
@@ -213,26 +230,16 @@ html, body, * {
     position: fixed;
     top: 0;
     z-index: 999;
-    animation: fadeIn 2s ease-in var(--animation-state);
+    animation: fadeIn 4s ease-in var(--animation-state);
 }
-.phone-number {
+
+
+.web-address {
     width: 100%;
-    background-color: transparent;
-    text-align: center;
+    color: transparent;
     position: fixed;
-    top: 10vh;
-    z-index: 999;
-    animation: fadeIn 2s ease-in var(--animation-state);
-}
-.phone-number h1 {
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    text-shadow: 1px 1px 5px #000;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.phone-number a {
-    text-decoration: none;
+    text-align: center;
+    top: 20vh;
 }
 
 
@@ -241,6 +248,7 @@ ul {
     background-color: #000;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     list-style-type: none;
     width: 100%;
 }
@@ -538,7 +546,7 @@ li {
     display: flex;
     padding: 20px;
     margin: clamp(20px, 5vw, 40px);
-    box-shadow: inset 0px 0px 3px 3px blue;
+    box-shadow: inset 0px 0px 3px 3px var(--border-color);
 }
 
 
@@ -930,15 +938,15 @@ select {
     justify-content: center;
 }
 .email-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 0 2vw;
     background-color: transparent;
     z-index: 999;
 }
 
-.email-text {
-    padding: 2vw;
-    font-size: clamp(0.75rem, 6vw, 2.5rem);
-}
 
 .phone-number-contact {
     font-size: clamp(0.75rem, 6vw, 2.5rem);
@@ -946,8 +954,9 @@ select {
     background-color: transparent;
     z-index: 999;
 }
-.email-contact h1, 
-.phone-number-contact h1 {
+.email-contact h4, 
+.phone-number-contact h4 {
+    font-size: clamp(0.75rem, 5vw, 2.5rem);
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
