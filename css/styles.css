@@ -104,13 +104,13 @@ html, body, * {
 }
 
 
-.header-wrapper {
+/* .header-wrapper {
     background-color: white;
     height: 100vh;
     position: relative;
     z-index: 10;
     animation: fadeToBlackAndUp 4s ease-out var(--animation-state);
-}
+} */
 
 
 .page-body {
@@ -126,7 +126,7 @@ html, body, * {
     align-items: center;
     flex-flow: column;
     height: var(--bg-img-ht);
-    animation: upAndFade 4s forwards;
+    /* animation: upAndFade 4s forwards; */
 }
 .logo-headlines__page {
     width: 80%;
@@ -230,7 +230,7 @@ html, body, * {
     position: fixed;
     top: 0;
     z-index: 999;
-    animation: fadeIn 4s ease-in var(--animation-state);
+    animation: fadeIn 2s ease-in var(--animation-state);
 }
 
 
@@ -1100,7 +1100,7 @@ section h4 {
 
     .mobile-menu {
         position: absolute;
-        width: 22vw;
+        width: 23vw;
         top: 40px;
         right: -24vw;
         border-style: solid none solid solid;
