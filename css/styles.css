@@ -335,9 +335,10 @@ li {
 }
 
 .dj-text {
-    font-size: clamp(1.15rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 6vw, 2rem);
     text-shadow: 2px 2px 1px rgb(0, 44, 109);
     text-align: center;
+    margin: 0 15vw;
     transform: translateZ(10px) scale(0.9);
 }
 
@@ -456,7 +457,7 @@ li {
 }
 .video-player {
     position: relative;
-    border: 10px solid rgb(255, 230, 230);
+    border: 5px solid rgb(255, 230, 230);
     border-radius: 5px;
     margin: 10px;
 }
