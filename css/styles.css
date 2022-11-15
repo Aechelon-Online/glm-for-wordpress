@@ -691,6 +691,7 @@ span {
     border-radius: 2px;
     /* -webkit-appearance: initial; */
     line-height: 22px;
+    padding-left: 5px;
 }
 
 h3 {
@@ -735,6 +736,10 @@ select {
     border-radius: 5px;
 }
 
+.entertainment-checkboxes {
+    position: relative;
+}
+
 
 .multi-selections {
     position: relative;
@@ -743,7 +748,7 @@ select {
 
 .down-arrow {
     position: absolute;
-    left: 1rem;
+    left: 0.5rem;
     top: -0.65rem;
     font-size: 30px;
     cursor: pointer;
