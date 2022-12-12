@@ -32,6 +32,7 @@ async function getData () {
     'orderBy' : 'starttime'
     })
     
+    
     let apiCall = await fetch(url)
     
     const data = await apiCall.json()
@@ -49,7 +50,7 @@ async function getData () {
     let stateSplit = stateAndZip.split(" ")
     let state = stateSplit[1]
     
-    console.log(stateSplit)
+    // console.log(stateSplit)
 
     const dateTime = data['items'][i]['start']['dateTime']
     const realDate = moment(dateTime).format('ll')
@@ -60,7 +61,7 @@ async function getData () {
     const date = monthDateSplit[1]
     
 
-    console.log(month)
+    // console.log(month)
     // console.log(summary)
     // console.log(location)
 
