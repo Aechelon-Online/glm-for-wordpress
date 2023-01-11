@@ -11,13 +11,12 @@ menuWrapper.addEventListener('click', () => {
     menuWrapper.classList.toggle("move-tab");
     menuBox.classList.toggle("hide-lines");
     spotMark.classList.toggle("cross");
-
 })
 
-checkboxes.addEventListener('click', () => {
-    document.querySelector(".list").classList.toggle("show");
+// checkboxes.addEventListener('click', () => {
+//     document.querySelector(".list").classList.toggle("show");
 
-})
+// })
 
 // Calendar API JS
 
@@ -99,3 +98,16 @@ async function getData () {
   }
 }
 getData()
+
+// Blog article post
+
+const post = document.querySelector(".blog__section-front")
+const trunc = "There are so many things to decide for your big day, but sometimes it’s hard to budget for everything and make it work perfectly. A wedding DJ doesn’t seem like it should be as much of a deal when it comes to cost. Besides, they are all pretty much the same, right? You may be in for a rude awakening when you thought you were saving money in place of the experience you are hoping for. Here are 10 reasons you would want to strongly consider NOT lowballing your entertainment needs."
+
+function truncateString() {
+  return trunc.split(" ").splice(0, 20).join(" ") + "..."
+}
+
+post.innerHTML = `<p class="blog__header">${truncateString()}</p>`
+
+console.log(post)

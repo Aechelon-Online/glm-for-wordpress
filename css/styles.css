@@ -246,7 +246,6 @@ html, body, * {
 
 
 ul {
-    padding: calc(3vh - 2vw) 0;
     background-color: #000;
     display: flex;
     justify-content: space-around;
@@ -674,8 +673,6 @@ span {
 }
 .select-field {
     background-color: var(--bg-color);
-    /* box-shadow: -2px -2px inset gray,
-                2px 2px inset rgb(40, 40, 40); */
     font-size: 1rem;
     padding: 2rem;
     border: 2px solid var(--text-color);
@@ -792,6 +789,7 @@ select {
 
 .side-arrow {
     padding-left: 0.5rem;
+    font-weight: bold;
 }
 
 
@@ -805,6 +803,9 @@ select {
     }
     .select-field {
         font-size: 0.75rem;
+    }
+    .title-margin {
+        margin-top: 2vh;
     }
 }
 
