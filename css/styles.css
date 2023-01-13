@@ -128,7 +128,6 @@ html, body, * {
     align-items: center;
     flex-flow: column;
     height: var(--bg-img-ht);
-    /* animation: upAndFade 4s forwards; */
 }
 .logo-headlines__page {
     width: 80%;
@@ -294,25 +293,25 @@ li {
     background-blend-mode: multiply;
     transform-style: preserve-3d;
 }
-.parallax-wrapper .full-page:nth-child(2) {
+.parallax-wrapper .full-page:nth-child(1) {
     background: rgba(0, 38, 255, 0.322) url('../img/dj-mixer-side.png');
     background-size: cover;
     background-position: center;
     transform: translateZ(10px) translateY(6vw) scale(1.1);
 }
-.parallax-wrapper .full-page:nth-child(3) {
+.parallax-wrapper .full-page:nth-child(2) {
     background: rgba(253, 253, 60, 0.3) url('../img/omb-pic.jpg');
     background-size: cover;
     background-position: center;
     transform: translateZ(10px) scale(1.1);
 }
-.parallax-wrapper .full-page:nth-child(4) {
+.parallax-wrapper .full-page:nth-child(3) {
     background: rgba(170, 0, 255, 0.322) url('../img/solo-mic-wedding.jpeg');
     background-size: cover;
     background-position: 25% 50%;
     transform: translateZ(10px) scale(1.1);
 }
-.parallax-wrapper .full-page:nth-child(5) {
+.parallax-wrapper .full-page:nth-child(4) {
     background: rgba(242, 0, 255, 0.322) url('../img/wedding-dance-lights.jpg');
     background-size: cover;
     background-position: center;
@@ -455,12 +454,13 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 2rem 0;
 }
 .video-player {
     position: relative;
     border: 5px solid rgb(255, 230, 230);
     border-radius: 5px;
-    margin: 5px;
+    margin: 1rem 2rem;
 }
 .video-text {
     font-family: "Red Hat Display";
@@ -469,7 +469,8 @@ li {
     margin: 5px;
 }
 .video {
-    width: clamp(210px, 85vw, 800px);
+    width: clamp(210px, 85vw, 750px);
+    height: clamp(150px, 45vw, 550px);
     
 }
 .video-front, .video-thumbnail {
@@ -481,9 +482,6 @@ li {
     opacity: 0;
     display: none;
     z-index: 1;
-}
-.ytp-large-play-button, .ytp-button {
-    z-index: 100;
 }
 
 /* Calendar API CSS */
@@ -806,6 +804,16 @@ select {
     }
     .title-margin {
         margin-top: 2vh;
+    }
+    #glm-text-front[data-abbr]::after {
+        content: attr(data-abbr);
+        font-size: 0.9rem;
+    }
+    #glm-text-front > span {
+        display: none;
+    }
+    .logo-front {
+        display: none;
     }
 }
 
@@ -1202,7 +1210,7 @@ section h4 {
     }
 }
 
-@media only screen and (min-width: 1250px) {
+/* @media only screen and (min-width: 1250px) {
     .video {
         width: clamp(350px, 30vw, 450px);
     }
@@ -1216,5 +1224,5 @@ section h4 {
         padding-top: 5vw;
         flex-direction: row;
     }
-}
+} */
 
