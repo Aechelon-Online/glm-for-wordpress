@@ -698,6 +698,8 @@ input {
     height: 2rem;
 }
 
+input#website { display: none; }
+
 
 select {
     color: var(--text-color);
