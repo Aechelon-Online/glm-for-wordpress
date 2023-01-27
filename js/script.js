@@ -13,6 +13,34 @@ menuWrapper.addEventListener('click', () => {
     spotMark.classList.toggle("cross");
 })
 
+
+let isOpen = true
+
+checkboxes.addEventListener('click', () => {
+    list.classList.toggle("show")
+    isOpen = !isOpen
+    serviceSelect.innerText = isOpen ? "▼" : "✕"
+    if(serviceSelect.innerText === "✕"){
+        serviceSelect.style.margin = "-2px 1px"
+    } else {
+        serviceSelect.style.margin = "0"
+    }
+})
+
+radios.addEventListener('click', () => {
+    dots.classList.toggle("show")
+    isOpen = !isOpen
+    eventSelect.innerText = isOpen ? "▼" : "✕"
+    if(eventSelect.innerText === "✕"){
+        eventSelect.style.margin = "-2px 1px"
+    } else {
+        eventSelect.style.margin = "0"
+    }
+   
+})
+
+
+
 document.querySelector("form").addEventListener("submit", function(event) {
   if (document.querySelector("input#website").value.length != 0) {
       event.preventDefault();
