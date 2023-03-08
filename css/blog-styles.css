@@ -30,7 +30,9 @@ body {
     margin-top: 0;
  }
  
- 
+ .blog__link {
+    color: inherit;
+}
  
  .blog__li {
      margin: 1.5rem;
@@ -54,9 +56,6 @@ body {
      line-height: 2rem;
  }
  
- .blog__link {
-    color: inherit;
- }
  
  .blog__worst-dj {
      padding-left: clamp(0rem, 10vw, 5rem);

@@ -1,7 +1,7 @@
 
 
 const videos = {
-    'https://www.youtube.com/embed/a4hIagju_sk': 'Greg Luce Music - Promo Video',
+    'https://www.youtube.com/embed/E5Ah_hqbzIg': 'Greg Luce Music - Promo Video',
     'https://www.youtube.com/embed/b7fEKZ8TE1E': 'Private Party - Listen To The Music',
     'https://www.youtube.com/embed/n60Pm7AsEB0': 'Rocket Man - Prestonwood CC'
     }

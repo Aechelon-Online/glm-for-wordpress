@@ -32,9 +32,9 @@ const headlines = [{
 let snippets = headlines.map(headline => {
   return post.innerHTML += `
   <div class="blog__dj-section">
-    <h1 class="blog__title">${headline.title}</h1>
+    <a class="blog__link" href='${headline.link}'><h1 class="blog__title">${headline.title}</h1></a>
       <div class="blog__worst-dj blog__worst-dj-front">
-        <img class="blog__img" src="${headline.image}" />
+        <a class="blog__link" href='${headline.link}'><img class="blog__img" src="${headline.image}" /></a>
       </div>
     <section class="blog__section blog__section-front">
       <p class="blog__header">${headline.article.split(" ").splice(0, 20).join(" ") + "..."} <a class="blog__link" href='${headline.link}'>(see article)</p>

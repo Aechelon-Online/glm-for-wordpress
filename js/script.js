@@ -4,15 +4,20 @@ const menuWrapper = document.querySelector(".menu-wrapper")
 const cross = document.querySelector(".cross")
 const menuBox = document.querySelector(".menu-box")
 const spotMark = document.querySelector(".spot-mark")
+const radios = document.querySelector(".event-radio-buttons")
+const list = document.querySelector(".list")
+const dots = document.querySelector(".dots")
+const eventSelect = document.querySelector(".event-select")
+const serviceSelect = document.querySelector(".service-select")
 
 
 menuWrapper.addEventListener('click', () => {
-    mobileMenu.classList.toggle("reveal");
-    menuWrapper.classList.toggle("move-tab");
-    menuBox.classList.toggle("hide-lines");
-    spotMark.classList.toggle("cross");
-})
+    mobileMenu.classList.toggle("reveal")
+    menuWrapper.classList.toggle("move-tab")
+    menuBox.classList.toggle("hide-lines")
+    spotMark.classList.toggle("cross")
 
+})
 
 let isOpen = true
 
@@ -39,15 +44,6 @@ radios.addEventListener('click', () => {
    
 })
 
-
-
-document.querySelector("form").addEventListener("submit", function(event) {
-  if (document.querySelector("input#website").value.length != 0) {
-      event.preventDefault();
-  }
-});
-
-
 // Calendar API JS
 
 async function getData () {
@@ -61,7 +57,6 @@ async function getData () {
     'orderBy' : 'starttime'
     })
     
-    
     let apiCall = await fetch(url)
     
     const data = await apiCall.json()
@@ -69,17 +64,18 @@ async function getData () {
 
     
   for (let i = 0; i < data['items'].length; i++) {
+    
     const summary = data["items"][i]['summary']
     const location = data['items'][i]['location']
     const locationParts = location.split(",")
-    const venue = locationParts[0]
+    
 
     let city = locationParts[2]
     let stateAndZip = locationParts[3]
     let stateSplit = stateAndZip.split(" ")
     let state = stateSplit[1]
     
-    // console.log(stateSplit)
+   
 
     const dateTime = data['items'][i]['start']['dateTime']
     const realDate = moment(dateTime).format('ll')
@@ -90,11 +86,6 @@ async function getData () {
     const date = monthDateSplit[1]
     
 
-    // console.log(month)
-    // console.log(summary)
-    // console.log(location)
-
-    
     if (summary === 'Tommy Bahamas' || summary.includes("Hartt")) {
     city = locationParts[3]
     stateAndZip = locationParts[4]
@@ -129,15 +120,8 @@ async function getData () {
 }
 getData()
 
-// Blog article post
-
-const post = document.querySelector(".blog__section-front")
-const trunc = "There are so many things to decide for your big day, but sometimes it’s hard to budget for everything and make it work perfectly. A wedding DJ doesn’t seem like it should be as much of a deal when it comes to cost. Besides, they are all pretty much the same, right? You may be in for a rude awakening when you thought you were saving money in place of the experience you are hoping for. Here are 10 reasons you would want to strongly consider NOT lowballing your entertainment needs."
-
-function truncateString() {
-  return trunc.split(" ").splice(0, 20).join(" ") + "..."
-}
-
-post.innerHTML = `<p class="blog__header">${truncateString()}</p>`
-
-console.log(post)
+document.querySelector("form").addEventListener("submit", function(event) {
+    if (document.querySelector("input#website").value.length != 0) {
+        event.preventDefault();
+    }
+});
